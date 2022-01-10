@@ -63,8 +63,9 @@
           // No need to change anything ABOVE this line ^
 
           return(
+<div> // the opening div was missing on top
               <h1>Draw a Card</h1>
-              <button onClick={}>
+              <button onClick={card}> // we were missing the parameter in the curly bracket
                 Click to Draw a Card
               </button>
               <button onClick={shuffle}>
@@ -75,17 +76,16 @@
                   return (
                     <div style={cardStyles} key={index}>
                       {card}
-                    </div>
-                  )
-                })}
-              </div>
-          )
-        }
-      }
 
+                  )
+  </div>              
+  </div> 
+                );
+                </div>
       // No need to change anything below this line
-      const domContainer = document.querySelector('#react-container')
-      ReactDOM.render(<App />, domContainer)
+                const domContainer = document.querySelector(`#react-container`);
+      ReactDOM.render(<App/>, (domContainer))
+
     </script>
   </body>
 </html>
